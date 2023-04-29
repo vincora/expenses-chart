@@ -2,9 +2,9 @@ import logo from "./logo.svg";
 import "./App.scss";
 import data from './data.json';
 
-const total = data.reduce((acc,cur) => {
-  return acc + cur.amount
-},0);
+const max = data.reduce((acc,cur) => {
+  return Math.max(acc, cur.amount)
+ }, 0) ;
 
 function App() {
   return (
@@ -21,13 +21,13 @@ function App() {
       <section className="layout__block">
         <div className="chart">
           <h1 className="chart__title">Spending - Last 7 days</h1>
-          <div className="chart__body">
+          <div className="chart__body" >
             {data.map((item)=> {
-              const amount = Math.floor((item.amount / total)*100);
+              const height = (item.amount/max)*100;
               return(
-              <div className="chart__item">
-                <div className="chart__bar" >{amount}</div>
-                <div className="chart__day">{item.day} </div>
+              <div className="chart__item" >
+                <div className="chart__bar" style={{"height": height + "%"}} ></div>
+                <div className="chart__day">{item.day}</div>
               </div>)
             })}
           </div>

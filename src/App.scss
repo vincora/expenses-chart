@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 @import './colors.scss';
 
+*{
+    box-sizing: border-box;
+}
+
 html{
     font-size: 1.125rem;
 }
@@ -76,19 +80,25 @@ h1,h2,p{
         padding-top: 2rem;
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
     }
     &__item{
         font-size: 1rem;
         max-width: 3rem;
-        flex: 1;
+        width: 11%;
         text-align: center;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
     &__bar{
-        height: 3rem;
+        
         background-color: $soft-red;
         border-radius: 0.25rem;
         margin-bottom: .5rem;
+    }
+    &__day{
+
     }
 }
 .statistics{
@@ -112,7 +122,7 @@ h1,h2,p{
     }
 }
 .divider{
-    background-color: $cream;
     height: 2px;
+    background-color: $cream;
     margin: 1.75rem 0;
 }
