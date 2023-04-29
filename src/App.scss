@@ -1,1 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import './colors.scss';
+
+html{
+    font-size: 1.125rem;
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    background-color: $cream;
+    color: $medium-brown;
+}
+
+h1,h2,p{
+    margin: 0;
+    font-weight: normal;
+    font-size: inherit;
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 30rem;
+    width: 100%;
+    flex-grow: 1;
+
+    &__block{
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: $very-pale-orange;
+
+        &_primary{
+            background-color: $soft-red;
+            padding: 1.5rem;
+        }
+
+    }
+}
+.my-account{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $very-pale-orange;
+     
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    &__title{
+        font-size: 1rem;
+    }
+    &__balance{
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+    &__logo{
+
+    }
+}
+.chart{
+    
+    &__title{
+        color: $dark-brown;
+        font-size: 1.85rem;
+        font-weight: 700;
+    }
+    &__body{
+        margin: 0;
+        padding: 0;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    &__item{
+        font-size: 1rem;
+        max-width: 3rem;
+        flex: 1;
+        text-align: center;
+    }
+    &__bar{
+        height: 3rem;
+        background-color: $soft-red;
+        border-radius: 0.25rem;
+        margin-bottom: .5rem;
+    }
+}
+.statistics{
+    
+    &__data{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__absolute{
+        color: $dark-brown;
+        font-weight: 700;
+        font-size: 2.7rem;
+    }
+    &__relative{
+        text-align: right;
+    }
+    &__relative-value{
+        color: $dark-brown;
+        font-weight: 700;
+    }
+}
+.divider{
+    background-color: $cream;
+    height: 2px;
+    margin: 1.75rem 0;
+}
