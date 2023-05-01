@@ -8,7 +8,16 @@
 html{
     font-size: 1.125rem;
     background-color: $cream;
+    height: 100%;
 
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'DM Sans', sans-serif;
+    color: $medium-brown;
 }
 
 @media (max-width: 34rem) {
@@ -18,15 +27,6 @@ html{
     .layout{
         margin: 1.25rem;
     }
-}
-
-#root{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'DM Sans', sans-serif;
-    color: $medium-brown;
 }
 
 h1,h2,p{
