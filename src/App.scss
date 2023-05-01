@@ -7,6 +7,17 @@
 
 html{
     font-size: 1.125rem;
+    background-color: $cream;
+
+}
+
+@media (max-width: 34rem) {
+    html{
+        font-size: 0.85rem;
+    }
+    .layout{
+        margin: 1.25rem;
+    }
 }
 
 #root{
@@ -15,7 +26,6 @@ html{
     align-items: center;
     height: 100vh;
     font-family: 'DM Sans', sans-serif;
-    background-color: $cream;
     color: $medium-brown;
 }
 
@@ -64,7 +74,10 @@ h1,h2,p{
         font-weight: 700;
     }
     &__logo{
-
+        height: 2.75rem;
+        img{
+            height: 100%;
+        }
     }
 }
 .chart{
@@ -77,9 +90,10 @@ h1,h2,p{
     &__body{
         margin: 0;
         padding: 0;
-        padding-top: 2rem;
+        padding-top: 3.5rem;
         display: flex;
         justify-content: space-between;
+        list-style: none;
     }
     &__item{
         font-size: 1rem;
@@ -90,16 +104,46 @@ h1,h2,p{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
+        @media (max-width: 34rem) {
+            height: 13rem;
+        }
     }
     &__bar{
-        
         background-color: $soft-red;
         border-radius: 0.25rem;
         margin-bottom: .5rem;
-    }
-    &__day{
+        position: relative;
 
+        &:hover{
+            background-color: $soft-red-hover;
+            cursor: pointer;
+        }
+        &:hover > div{
+            display: block;
+        }
+        &_mod{
+            background-color: $cyan;
+        }
+        &_mod:hover{
+            background-color: $cyan-hover;
+        }
     }
+    &__bar-info{
+        position: absolute;
+        top: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 0.25rem;
+        margin-bottom: .5rem;
+        padding: .4rem;
+        background-color: $dark-brown;
+        color: $cream;
+        font-weight: 700;
+        z-index: 3;
+        display: none;
+    }
+
 }
 .statistics{
     
@@ -119,6 +163,12 @@ h1,h2,p{
     &__relative-value{
         color: $dark-brown;
         font-weight: 700;
+    }
+    @media (max-width: 34rem) {
+        font-size: 1.07rem;
+        &__absolute{
+            font-size: 2.5rem;
+        }
     }
 }
 .divider{
