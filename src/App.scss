@@ -3,13 +3,17 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html{
     font-size: 1.125rem;
     background-color: $cream;
     height: 100%;
-
+    @media (max-width: 34rem) {
+        font-size: 0.85rem;
+    }
 }
 body{
     display: flex;
@@ -18,15 +22,6 @@ body{
     height: 100%;
     font-family: 'DM Sans', sans-serif;
     color: $medium-brown;
-}
-
-@media (max-width: 34rem) {
-    html{
-        font-size: 0.85rem;
-    }
-    .layout{
-        margin: 1.25rem;
-    }
 }
 
 h1,h2,p{
@@ -42,6 +37,12 @@ h1,h2,p{
     max-width: 30rem;
     width: 100%;
     flex-grow: 1;
+
+    &__wrapper{
+        @media (max-width) {
+            margin: 1.25rem;
+        }
+    }
 
     &__block{
         padding: 2rem;
